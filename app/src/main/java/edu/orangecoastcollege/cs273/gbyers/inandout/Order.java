@@ -36,22 +36,13 @@ public class Order {
 
     public void setDoubleBurger(int qty)
     {
-        mTotalQty += qty;
-        for(int i = 0; i<qty; i++)
-        {
-            mTotalPrice+=DOUBLE_BURGER;
-        }
-        //setCycle(qty, DOUBLE_BURGER);
+        setCycle(qty, DOUBLE_BURGER);
     }
 
     public void setCheeseBurger(int qty)
     {
-        mTotalQty += qty;
-        for(int i = 0; i<qty; i++)
-        {
-            mTotalPrice+=CHEESE_BURGER;
-        }
-        //setCycle(qty, CHEESEBURGER);
+
+        setCycle(qty, CHEESE_BURGER);
     }
     public void setFries(int qty)
     {
