@@ -22,7 +22,7 @@
         android:layout_row="0"
         android:text="@string/header_label"
         android:layout_gravity="fill_horizontal"
-        android:layout_columnSpan="6"
+        android:layout_columnSpan="7"
         android:textColor="@color/primary_dark_material_dark"
         android:textSize="25sp"/>
 
@@ -35,7 +35,7 @@
         android:layout_gravity="fill_horizontal"
         android:layout_columnSpan="3"
         android:layout_row="1"
-        android:gravity="right"
+        android:gravity="end"
         android:layout_marginTop="10dp"/>
 
     <TextView
@@ -61,7 +61,7 @@
         android:layout_column="5"
         android:layout_gravity="fill_horizontal"
         android:paddingTop="15dp"
-        />
+        android:layout_columnSpan="2"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/french_fry_edit"
+        android:id="@+id/frenchFryEdit"
         android:layout_column="5"
         android:layout_row="3"
         android:layout_columnSpan="2"
@@ -159,7 +159,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/shake_edit"
+        android:id="@+id/shakeEdit"
         android:layout_gravity="fill_horizontal"
         android:layout_column="5"
         android:layout_columnSpan="2"/>
@@ -279,7 +279,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="fill_horizontal"
         android:layout_column="0"
-        android:layout_columnSpan="6"
+        android:layout_columnSpan="7"
         android:paddingTop="15dp">
 
         <Button

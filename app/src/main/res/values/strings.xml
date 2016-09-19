@@ -18,5 +18,9 @@
     <string name = "large_price">$ 1.75</string>
     <string name = "order_button">PLACE ORDER</string>
 
+    <string name = "before_tax_report">Total:</string>
+    <string name = "total_report">Order Total:</string>
+    <string name = "tax_report">Order Tax:</string>
+
 
 </resources>
