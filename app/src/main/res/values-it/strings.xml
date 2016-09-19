@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dentro e fuori</string>
+    <string name="cheeseburger"> hamburger al formaggio</string>
+    <string name="double_double">Doppia</string>
+    <string name="fountain_label">Le bevande Fontana (pick dimensioni )</string>
+    <string name="french_fries">Patatine fritte</string>
+    <string name="header_label">Posizionare un Ordine</string>
+    <string name="items_report">Articoli ordinati :</string>
+    <string name="large">Grande</string>
+    <string name="medium"> medio</string>
+    <string name="new_order_button">AVVIO NUOVO ORDINE</string>
+    <string name="order_button">INVIA ORDINE</string>
+    <string name="shakes">Shakes</string>
+    <string name="small"> Piccolo</string>
+    <string name="subtotal_report">\nTotale parziale:</string>
+    <string name="tax_report">\nFiscale ( 8 %)</string>
+    <string name="total_report">Ordine totale</string>
+</resources>
