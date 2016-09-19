@@ -8,7 +8,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.NumberFormat;
+
 public class OrderActivity extends Activity {
+
+    NumberFormat currency = NumberFormat.getCurrencyInstance();
+
 
     private EditText cheeseburgerEdit;
     private EditText doubleEdit;
@@ -78,9 +83,11 @@ public class OrderActivity extends Activity {
         //Intent(this, destination)
         Intent orderSummaryIntent = new Intent(this, SummaryActivity.class);
 
-        orderSummaryIntent.putExtra("orderTotalString", orderTotalString);
+        orderSummaryIntent.putExtra("orderTotal", orderTotalString);
 
-        //putExtra otherString
+        orderSummaryIntent.putExtra("restOfOrder", orderTaxString);
+
+         constructOrderSummary();
 
         startActivity(orderSummaryIntent);
 
@@ -88,7 +95,11 @@ public class OrderActivity extends Activity {
 
     private void constructOrderSummary()
     {
-    //make order total
+    //make order total string
+        orderTotalString = getString(R.string.total_report)+ currency.format(orderOne.getTotalAmount());
+    //make the rest of the report in one string
+        orderTaxString = getString(R.string.items_report)+ orderOne.getTotalQty()+ getString(R.string.subtotal_report)+
+                         orderOne.getSubtotalPrice()+ getString(R.string.tax_report)+ currency.format(orderOne.getTax());
     }
 
 

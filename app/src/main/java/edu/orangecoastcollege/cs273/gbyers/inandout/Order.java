@@ -4,11 +4,14 @@ package edu.orangecoastcollege.cs273.gbyers.inandout;
  * @author Grant Byers 9/16/206
  */
 public class Order {
+    //Tax Constant is 8%
+    private static final double TAX = .08;
     private static final double DOUBLE_BURGER = 3.60,  CHEESE_BURGER =2.15, FRIES = 1.65;
     private static final double SHAKES = 2.20, FOUNTAIN_HI = 1.75, FOUNTAIN_MED = 1.55, FOUNTAIN_LOW = 1.45;
 
     private int mTotalQty;
     private double mTotalPrice;
+    private double taxAmount;
 
     public Order()
     {
@@ -21,17 +24,15 @@ public class Order {
         return mTotalQty;
     }
 
-//    public void setTotalQty(int totalQty) {
-//        mTotalQty = totalQty;
-//    }
-
-    public double getTotalPrice() {
+    public double getSubtotalPrice() {
         return mTotalPrice;
     }
 
-//    public void setTotalPrice(double totalPrice) {
-//        mTotalPrice = totalPrice;
-//    }
+    public double getTotalAmount()
+    {
+        return (taxAmount + mTotalPrice);
+    }
+
 
     public void setDoubleBurger(int qty)
     {
@@ -79,6 +80,12 @@ public class Order {
         {
             mTotalPrice+=item;
         }
+    }
+
+    public double getTax()
+    {
+        taxAmount = mTotalPrice * TAX;
+        return taxAmount;
     }
 
 }
