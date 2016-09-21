@@ -6,18 +6,90 @@ package edu.orangecoastcollege.cs273.gbyers.inandout;
 public class Order {
     //Tax Constant is 8%
     private static final double TAX = .08;
-    private static final double DOUBLE_BURGER = 3.60,  CHEESE_BURGER =2.15, FRIES = 1.65;
-    private static final double SHAKES = 2.20, FOUNTAIN_HI = 1.75, FOUNTAIN_MED = 1.55, FOUNTAIN_LOW = 1.45;
+    private static final double PRICE_DOUBLE_DOUBLE = 3.60,  PRICE_CHEESE_BURGER =2.15, PRICE_FRENCH_FRIES = 1.65;
+    private static final double PRICE_SHAKES = 2.20, PRICE_LARGE_DRINK = 1.75, PRICE_MEDIUM_DRINK = 1.55, PRICE_SMALL_DRINK = 1.45;
 
     private int mTotalQty;
     private double mTotalPrice;
     private double taxAmount;
+    private int mCheeseburger;
+    private int mDoubleDouble;
+    private int mFrenchFries;
+    private int mLargeDrink;
+    private int mMediumDrink;
+    private int mSmallDrink;
+    private int mShake;
 
-    public Order()
-    {
-        //initialize member variables to zero
-        mTotalPrice = 0;
-        mTotalQty = 0;
+    public int getShake() {
+        return mShake;
+    }
+
+    public void setShake(int qty) {
+        this.mShake = qty;
+        mTotalQty += qty;
+        mTotalPrice += qty * PRICE_SHAKES;
+
+    }
+
+    public int getSmallDrink() {
+        return mSmallDrink;
+    }
+
+    public void setSmallDrink(int qty) {
+        this.mSmallDrink =qty;
+        mTotalQty += qty;
+        mTotalPrice += qty * PRICE_SMALL_DRINK;
+    }
+
+    public int getMediumDrink() {
+        return mMediumDrink;
+    }
+
+    public void setMediumDrink(int qty) {
+        this.mMediumDrink = qty;
+        mTotalQty += qty;
+        mTotalPrice+= qty * PRICE_MEDIUM_DRINK;
+    }
+
+    public int getLargeDrink() {
+        return mLargeDrink;
+    }
+
+    public void setLargeDrink(int qty) {
+        this.mLargeDrink = qty;
+        mTotalQty += qty;
+        mTotalPrice += qty * PRICE_LARGE_DRINK;
+    }
+
+    public int getFrenchFries() {
+        return mFrenchFries;
+    }
+
+    public void setFrenchFries(int qty) {
+        this.mFrenchFries = qty;
+        mTotalQty+=qty;
+        mTotalPrice+= PRICE_FRENCH_FRIES*qty;
+    }
+
+    public int getDoubleDouble() {
+        return mDoubleDouble;
+    }
+
+    public void setDoubleDouble(int qty) {
+        this.mDoubleDouble = qty;
+        mTotalQty+=qty;
+        mTotalPrice+= PRICE_DOUBLE_DOUBLE*qty;
+    }
+
+    public int getCheeseburger() {
+        return mCheeseburger;
+    }
+
+    public void setCheeseburger(int qty) {
+        this.mCheeseburger = qty;
+        mTotalQty+=qty;
+        mTotalPrice+= PRICE_CHEESE_BURGER*qty;
+
     }
 
     public int getTotalQty() {
@@ -34,44 +106,6 @@ public class Order {
     }
 
 
-    public void setDoubleBurger(int qty)
-    {
-        setCycle(qty, DOUBLE_BURGER);
-    }
-
-    public void setCheeseBurger(int qty)
-    {
-
-        setCycle(qty, CHEESE_BURGER);
-    }
-    public void setFries(int qty)
-    {
-       setCycle(qty, FRIES);
-    }
-    public void setShakes(int qty)
-    {
-        setCycle(qty, SHAKES);
-    }
-    public void setFountainHi(int qty)
-    {
-        setCycle(qty,FOUNTAIN_HI);
-    }
-    public void setFountainMed(int qty)
-    {
-        setCycle(qty, FOUNTAIN_MED);
-    }
-    public void setFountainLow(int qty)
-    {
-        setCycle(qty, FOUNTAIN_LOW);
-    }
-   private void setCycle(int qty, double item)
-    {
-        mTotalQty+=qty;
-        for(int i=0; i<qty; i++)
-        {
-            mTotalPrice+=item;
-        }
-    }
 
     public double getTax()
     {

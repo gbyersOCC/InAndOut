@@ -1,14 +1,13 @@
 package edu.orangecoastcollege.cs273.gbyers.inandout;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class SummaryActivity extends Activity {
+public class SummaryActivity extends AppCompatActivity {
 
     private TextView otherReportTextView;
     private TextView totalReportTextView;
@@ -26,12 +25,11 @@ public class SummaryActivity extends Activity {
         //Declare Intent from other activity using getIntent()
         Intent recievedIntent = getIntent();
 
-        String totalOrderString = recievedIntent.getStringExtra("orderTotalString");
-        totalReportTextView.setText(totalOrderString);
-
+        String totalOrderString = recievedIntent.getStringExtra("orderTotal");
         String reportTotalString = recievedIntent.getStringExtra("restOfOrder");
-        otherReportTextView.setText(reportTotalString);
 
+        otherReportTextView.setText(reportTotalString);
+        totalReportTextView.setText(totalOrderString);
 
     }
 

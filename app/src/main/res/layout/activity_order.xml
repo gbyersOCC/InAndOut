@@ -290,7 +290,7 @@
             android:id="@+id/orderButton"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
-            android:onClick="constructOrderSummary"/>
+            android:onClick="activateOrderSummary"/>
     </FrameLayout>
 
 </GridLayout>
